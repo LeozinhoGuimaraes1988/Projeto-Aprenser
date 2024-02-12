@@ -1,0 +1,232 @@
+:root {
+  --primary-color: #fed001;
+}
+
+html {
+  /* font: 62.5%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; */
+  font: 400 62.5% 'Inter', sans-serif;
+}
+
+p,
+a {
+  font-size: 1.6rem;
+  /* margin-left: 1rem; */
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+  /* margin-left: 1rem; */
+}
+
+nav a {
+  color: inherit; /* HERANÇA. ESSE ITEM HERDA A COR DO ITEM ACIMA, NO CASO O WRAPPERCONTAINER DARK*/
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  border-radius: 4px; /* DÁ O EFEITO ARREDONDADO PARA O BOTÃO*/
+  font-size: 1.8rem;
+  text-decoration: none; /* TIRA O SUBLINHADO PADRÃO DO BOTÃO*/
+  padding: 1.5rem 4.6rem; /* CRIA ESPAÇO ENTRE AS LETRAS E A BORDA DO BOTÃO*/
+  display: inline-block; /* COLOQUEI DISPLAY IN-LINE BLOCK PARA DAR MARGEM PARA O HERO_TITLE*/
+  color: inherit; /* MUDA A COR DAS LETRAS PARA PRETO (HERANÇA)*/
+}
+
+.wrapperContainer {
+  padding-top: 1px; /* SERVE PARA COLOCAR MARGEM PARA NÃO EMPURRAR O CONTEÚDO DA DIV DE CIMA*/
+}
+
+.wrapperContainer-dark {
+  background-color: #2a2a2a;
+  color: #fafafa;
+}
+
+.wrapperContainer-light {
+  background-color: #fafafa;
+}
+
+.wrapperContainer-dark2 {
+  background-color: #003464;
+  color: #fafafa;
+}
+
+.wrapperContainer-fixed {
+  position: sticky; /* COLOCA O MENU NO TOPO SEM TIRAR ELE DO FLUXO DA PÁGINA*/
+  width: 100%;
+  top: 0; /* SE NÃO TIVER ESSE VALOR, O MENU NÃO FICA FIXO*/
+  /* left: 0; */
+}
+
+.wrapperContainer-padded {
+  padding: 12rem; /* SERVE PARA, QUANDO CLICAR NO MENU EM CIMA, IR PARA O LUGAR NA PÁGINA E O TÍTULO FICAR APARENTE*/
+}
+
+.container {
+  max-width: 127.6rem; /* ESSE MAX-WIDTH FOI COLOCADO AQUI PARA DESCOLAR O CONTEÚDO DAS BORDAS*/
+  margin: auto; /* DESSE JEITO, É FEITA UMA CENTRALIZAÇÃO DO CONTEÚDO*/
+}
+
+.section_title {
+  padding: 7rem 0; /* O PRIMEIRO VALOR SE REFERE PARA CIMA E PARA BAIXO. O SEGUNDA PRA DIR E ESQ*/
+  text-align: center;
+  margin: 0; /* ESSAS MARGENS ZERAM AS MARGENS QUE JÁ VEM DO AG. DE USUÁRIO. VER 'INSPECIONAR -> SETA ACIMA -> SELECIONA O ITEM -> COMPUTADO*/
+}
+
+.section_btn {
+  margin: 7rem 0; /* PRIMEIRO VALOR PRA CIMA E PRA BAIXO, SEGUNDO VALOR PARA ESQUERDA E DIREITA*/
+}
+
+.header {
+  /* AQUI, EU TRABALHO COM A REGIÃO DO APRENSER*/
+  display: flex; /* PODERIA SER O DISPLAY IN-LINE BLOCK*/
+  justify-content: space-between; /* DEFINE O ALINHAMENTO DOS ITENS HORIZONTALMENTE COM ESPAÇO ENTRE AMBOS*/
+  align-items: center; /* CENTRALIZA OS ITENS VERTICALMENTE*/
+  color: var(--primary-color);
+  padding: 2rem 0;
+}
+
+.header_nav a {
+  padding: 0.75em 1.15em; /* APLICA PADDING AO MENU HORIZONTALMENTE E VERTICALMENTE*/
+  border: solid 1px; /* APLICA BORDA AOS ITENS DO MENU HERDANDO A COR DO OBJETO PAI*/
+  text-decoration: none;
+}
+
+.header_nav ul {
+  display: flex; /* SET DISPLAY FLEX PARA FACILITAR A FORMATAÇÃO*/
+  gap: 0.6rem; /* APLICA UM ESPAÇO ENTRE OS ITENS DE MODO SUTIL*/
+  list-style-type: none; /* TIRA OS BULLETS PADRÃO DA UL*/
+}
+
+.header_nav a:hover {
+  background-color: black;
+}
+
+.wrapperContainer-hero {
+  background-image: linear-gradient(transparent, rgb(241, 241, 53));
+}
+
+.heroBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20rem;
+}
+
+.hero_title {
+  margin-bottom: 4rem;
+}
+
+.cursos {
+  text-align: center;
+}
+
+.curso_card {
+  /*border: 1px solid #949494; /* LARGURA DA BORDA; TIPO DA BORDA; COR DA BORDA*/
+  /* flex-grow: 1; QUANTO UM ELEMENTO VAI CRESCER SE TIVER POSSIBILIDADE DE CRESCER
+    flex-shrink: 1; QUANTO UM ELEMENTO VAI DIMINUIR SE ELE TIVER POSSIBILIDADE DE DIMINUIR 
+    flex-basis: 0; */ /* LARGURA HIPOTÉTICA*/
+  flex: 1; /* É UM ATALHO PARA GROW, SHRINK E BASIS. DEIXA TODOS OS CARDS DO MESMO TAMANHO POR DISTRIBUIR OS ESPAÇOS.*/
+  /*border-radius: 10px; 
+    /*overflow: hidden; /* A BORDA VAI ESCONDER A PONTA DA IMAGEM CASO A BORDA SEJA MAIS ARREDONDADA DO QUE A IMAGEM*/
+}
+
+.curso_card img {
+  display: block; /* É DISPLAY BLOCK PORQUE É UM ELEMENTO DE LINHA*/
+  width: 100%; /* VAI DISTRIBUIR AS IMAGENS DENTRO DOS CARDS DE MODO A OCUPAR TODO O ESPAÇO*/
+}
+
+.cursosContainer {
+  display: flex; /* COLOCA OS CARDS LADO A LADO. PRECISA DE UMA DIV PARA ISSO.*/
+  text-align: left; /* ALINHA À ESQUERDA O CONTEÚDO*/
+  gap: 2rem;
+}
+
+.curso_card h3 {
+  /* ACESSA OS TÍTULOS DOS CARDS.*/
+  font-size: 2.4rem; /* CORRESPONDE A 24PX*/
+}
+
+.curso_card p {
+  font-size: 1.8rem;
+  line-height: 1.5; /* DÁ ESPAÇO ENTRE AS LINHAS. FICA MENOR SE COLOCAR REM*/
+}
+
+.cursos_card_content {
+  padding: 1rem 1.25rem; /* O SEGUNDO VALOR TÁ DANDO PADDING NAS LATERAIS*/
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px; /* 0 - parte de cima, esquerda; 0 - parte de cima, direita; 8 - nas partes de baixo*/
+  border-top: transparent; /* FICA UM ESPAÇO ENTRE A BORDA E A IMAGEM DO CARD. ESSA FUNÇÃO TIRA ESSE ESPAÇO*/
+}
+
+.escola {
+  display: flex;
+  gap: 7rem;
+  padding-top: 6rem; /* APLICOU O PADDING NA PARTE DE CIMA DA IMAGEM, AMPLIANDO A ÁREA AZUL*/
+}
+
+.escola_title {
+  font-size: 3.2rem;
+  margin-top: 2rem;
+}
+
+.escola p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+/* .contacts {
+    text-align: center;
+    padding: 2.5rem;
+} */
+
+.endereco {
+  text-align: right; /* FEZ A MESMA APLICAÇÃO DO 'END'*/
+  font: normal 1.8rem 'Inter', sans-serif; /* STYLE, TAMANHO, TIPO; É UMA ATALHO*/
+  margin: 3rem 0; /* MARGEM NA PARTE DE CIMA E NA PARTE DE BAIXO*/
+}
+
+.footer {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.5rem;
+}
+
+.footer a {
+  color: inherit;
+}
+
+.header_nav a {
+  transition: background-color 0.3s ease;
+}
+
+.header_nav a.active {
+  background-color: #fed001;
+  color: black;
+}
+.btn {
+  transition: background-color 0.3s ease;
+  background-color: #fed001;
+}
+.btn.active {
+  transition: background-color 0.1s ease;
+  background-color: black;
+  color: #fed001;
+}
