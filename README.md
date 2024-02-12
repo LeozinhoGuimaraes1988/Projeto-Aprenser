@@ -1,2 +1,2 @@
 # Projeto-Aprenser
-Projeto de co-criação de uma página web.
+Este projeto foi feito com aulas on-line. Porém, eu adicionei funcionalidades usando JavaScript e jQuery.
